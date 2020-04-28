@@ -8,102 +8,153 @@
       body {
         margin: 0;
         padding: 0;
+        font-family: arial;
+        background: #ededed;
       }
-        #header {
-          position: fixed;
-          width: 100%;
-          height: 80px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #ededed;
-        }
-        #container {
-          padding-top: 60px;
-        }
-        #nav-bar ul {
-          
-          padding: 0;
-          margin: 0;
-          background-color: #ededed;
-          list-style: none;
-        }
-        #nav-bar ul li {
-          display: inline;
-        }
-        #nav-bar ul li a {
-          padding: 2px 10px;
-          display: inline-block;
-          background-color: #ededed;
-          color: #333;
-          text-decoration: none;
-          border-bottom: 3px solid #ededed;
-        }
-        #nav-bar ul li a:hover {
-            background-color:#D6D6D6;
-            color: #6D6D6D;
-            border-bottom:3px solid #EA0000;
-        }
-        #form, #sobre, #produto, #preco{
-          /* width: 30%;
-          margin: auto;
-          align-items: center; */
-           
-          text-align:center;
-          
-         
-        }
-        #form #email {
-           /* display: block; 
-           text-align:center; */
-        }
+      img {
+        padding: 10px 0 10px 60px;
+      }
+      footer {
+        text-align: right;
+        padding: 20px;
+      }
 
-        @media ( max-width: 600px ) {
-          video {
-            width: 150px;
-          }
+      footer ul li {
+        display: inline;
+      }
+
+      #header {
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #ededed;
+        
+      }
+      #container {
+        padding-top: 60px;
+      }
+
+      #nav-bar ul {
+        padding: 0;
+        margin: 0;
+        background-color: #ededed;
+        list-style: none;
+      }
+      #nav-bar ul li {
+        display: inline;
+      }
+      #nav-bar ul li a {
+        padding: 2px 10px;
+        display: inline-block;
+        background-color: #ededed;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 3px solid #ededed;
+      }
+      #nav-bar ul li a:hover {
+        background-color:#D6D6D6;
+        color: #6D6D6D;
+        border-bottom:3px solid #EA0000;
+      }
+      #form, #sobre, #produto, #preco{
+        /* width: 30%;
+        margin: auto;
+        align-items: center; */
+
+        text-align:center;
+      }
+      #produto {
+        padding: 50px;
+      }
+
+      /* #form {
+        padding: 50px;
+      } */
+
+      @media ( max-width: 600px ) {
+        video {
+          width: 150px;
         }
+      }
+      .group {
+        text-align: justify;
+        width: 70%;
+        margin: auto;
+      }
+      #tools {
+        display: flex;
+        width: 70%;
+        margin: auto;
+      /*   justify-content: center; */
+      /*   background: red; */
+      /*   border: 1px solid blue; */
+      }
+      .services{
+        border: 1px solid black;
+        width: 100%;
+        margin: 1px;
+        text-align: center;
+      }
+      #form-section{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+
+      #form-section h2 {
+        padding-top: 30px;
+      }
+
+      .services .title{
+        padding: 10px;
+        text-align: center;
+        background: #ddd;
+      }
+      .ct {
+        padding-bottom: 50px;
+      }
+      .ct h2 {
+        color: green;
+      }
 
 
     </style>
 </head>
 <body>
   <header id="header">
-    <img id="header-img" src="DAcordes.png" alt="DAcordes" width="150px" height="60px">
+    <img id="header-img" src="https://raw.githubusercontent.com/Britivaldo/FreeCodeCamp-RWDP-3/master/DAcordes.png" alt="DAcordes" width="150px" height="60px">
     <nav id="nav-bar">
       <ul>
         <li>
           <a class="nav-link" href="#sobre">Sobre</a>
         </li>
-        <li>
+        <li >
           <a class="nav-link" href="#produto">Produto</a>
         </li>
         <li>
-          <a class="nav-link" href="#preco">Preço</a>
+          <a class="nav-link" href="#tools">Tools</a>
         </li>
       </ul>
     </nav>
 </header>
 <div id="container">
-  <h2>Seja nosso parceiro</h2>
-  <form id="form" action="https://www.freecodecamp.org/email-submit">
-    <input id="email" name="email" placeholder="Enter your email" type="email"/> 
-    <input id="submit" type="submit"></input>
-  </form>
-
   <section id="sobre">
-    <div>
+    <div class="group">
       <h2> Público Alvo </h2>
       <p>DAcordes ou Dicionário de Acordes é aplicativos direcionado ao público violonista, cuja função é ajudar a conhecer acordes</p>
     </div>
-    <div>
+    <div class="group">
       <h2> Funções disponiveis </h2>
       <p>
       A primeira é encontrada na página principal, o campo busca, a partir deste campo o usuário pode pesquisar por 
       acordes, a segunda função é o scroll, que seria a barra de rolagem, encontrada na página principal e por fim o imagem do acordes.
       </p>
     </div>
-    <div>
+    <div class="group">
       <h2> Motivação </h2>
       <p>
         A Motivação para a criação desse aplicativo foi o conhecimentos, aprender a desenvolver um aplicativos comercial e posta-lo na 
@@ -113,26 +164,49 @@
   </section>
 
   <section id="produto">
-    <video id="video" width="320" height="240" controls>
-    <source src="" type="video/mp4"/>
-  </video>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RmO1mWaOtco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </iframe>
   </section>
 
-  <section id="preco">
-    <div>
+  <section id="tools">
+    <div id="acordes" class="services">
       <div class="title">Acordes</div>
-      <p>Serviço já disponivel no aplicativo</p>
+      <div class="ct">
+        <h2> Free </h2>
+        <div>Vários acordes</div>
+      </div>
     </div>
-    <div>
-      <div class="title" >Cifras</div>
-      <p>Serviço previsto para próxima atualização</p>
-    </div>
-    <div>
+    <div id="vacordes" class="services">
       <div class="title">Variações de Acordes</div>
-      <p>Serviço previsto para próxima atualização</p>
+      <div class="ct">
+        <h2> Free </h2>
+        <div>Não disponivel</div>
+      </div>
+    </div>
+    <div id="cifras" class="services">
+      <div class="title">Cifras</div>
+      <div class="ct">
+        <h2> Free </h2>
+        <div>Não disponivel</div>
+      </div>
     </div>
   </section>
-  <footer></footer>
+  <section id="form-section">
+    <h2>Seja nosso parceiro</h2>
+    <form id="form" action="https://www.freecodecamp.org/email-submit">
+      <input id="email" name="email" placeholder="Enter your email" type="email"/> 
+      <input id="submit" type="submit"></input>
+    </form>
+  </section>
 </div>
+<footer>
+  <ul>
+    <li>Privacy</li>
+    <li>Terms</li>
+    <li>Contact</li>
+  </ul>
+  <span>Copyright 2020, DAcordes</span>
+</footer>
 </body>
 </html>
